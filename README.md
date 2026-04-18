@@ -1,19 +1,18 @@
 # Creating-Organizational-Units-Groups-and-Users
-# Active Directory Home Lab: Directory Management
 
-This guide demonstrates how to build and manage the basic hierarchy of a Windows Active Directory environment, including the creation of **Organizational Units (OUs)**, **Groups**, and **Users**.
+Here is a lab and guide I created with screenshots that demonstrates the basic hierarchy of a Windows Active Directory environment, including the creation of **Organizational Units (OUs)**, **Groups**, and **Users**.
 
 ---
 
 ## 1. Creating an Organizational Unit (OU)
-Organizational Units are the primary containers used to organize objects within a domain. They allow for more granular control over Group Policy and administrative permissions.
+Organizational Units are the primary containers used to organize objects within a domain. They allow for more granular control over Group Policy and administrative permissions. Follow the instructions below to create an OU.  
 
 1. Open **Server Manager** and navigate to **Tools** > **Active Directory Users and Computers**.
    <img width="960" height="540" alt="Untitled presentation" src="https://github.com/user-attachments/assets/3eae7c11-7548-4cc3-9c6b-4593719e3bab" />
 
-2. In the console tree, right-click your domain (e.g., `CAPSLOCH`).
+2. In the console tree, right-click your domain (my domain is named "CAPSLOCH" and yours is likely named something different).
 3. Select **New** > **Organizational Unit**.
-4. In the dialog box, enter a name for your OU (e.g., `USA`).
+4. In the dialog box, enter a name for your OU (in my example I named mine "USA").
     * *Note: OUs can be nested. To create a sub-OU, simply right-click an existing OU and repeat these steps.*
   
 <img width="960" height="540" alt="Untitled presentation(1)" src="https://github.com/user-attachments/assets/bd272b87-debb-49ea-93ed-04afb60f5d31" />
@@ -21,7 +20,7 @@ Organizational Units are the primary containers used to organize objects within 
 5. Click **OK**.
 
 ## 2. Adding Groups and Distribution Lists
-Groups allow you to manage multiple users at once. You can create these within your new OUs to maintain a clean structure.
+Groups allow you to manage multiple users at once. You can create these within your new OUs to maintain a clean structure. Follow the instructions below to add Groups and Distribution Lists. 
 
 1. Right-click your target OU and select **New** > **Group**.
 2. Enter the **Group Name**.
@@ -33,7 +32,7 @@ Groups allow you to manage multiple users at once. You can create these within y
 
 
 ## 3. Provisioning New Users
-Adding users to specific OUs ensures they inherit the correct policies and group memberships.
+Adding users to specific OUs ensures they inherit the correct policies and group memberships. Follow the instructions below to provision a new user.
 
 1. Right-click the desired OU and select **New** > **User**.
 2. Fill in the user’s details (First Name, Last Name, and User Logon Name).
